@@ -27,6 +27,8 @@ import { ShowPersonDetailComponent } from './show-person/show-person-detail/show
 import { ShowPlaceDetailComponent } from './show-place/show-place-detail/show-place-detail.component';
 import { ShowEpisodeDetailComponent } from './show-espisode/show-episode-detail/show-episode-detail.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'personajes', component: ShowPersonComponent},
@@ -59,6 +61,10 @@ const routes: Routes = [
       MatSortModule,
       MatTooltipModule,
       MatPaginatorModule,
+      MatSortModule,
+      MatSelectModule,
+      FormsModule,
+      ReactiveFormsModule,
       DatePipe,],
 })
 export class PrincipalModule { }

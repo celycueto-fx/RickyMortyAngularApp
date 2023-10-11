@@ -11,6 +11,8 @@ export interface RickyMorty {
   episode:  string[];
   url:      string;
   created:  Date;
+  options:string[];
+    defaultValue:string;
 }
 
 

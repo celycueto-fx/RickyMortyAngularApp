@@ -1,0 +1,35 @@
+<div  fxLayout="column" fxLayoutAlign="center center"  fxLayoutGap="40" >
+
+
+<h1>Ricky And Morty APP</h1>
+<mat-card fxFlex>
+  <mat-card-header>
+    <mat-card-title>
+      <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/10/rick-morty-critica.jpg?tf=520x">
+    </mat-card-title>
+
+  </mat-card-header>
+  <mat-card-actions fxLayout="row" fxLayoutAlign="space-around center">
+    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="20" >
+
+      <button mat-raised-button
+      matTooltipPosition="above"
+      matTooltip="Show characteres"
+       color="primary"
+       (click)="showPersonajes()">Personajes</button>
+
+        <button mat-raised-button
+        matTooltipPosition="above"
+        matTooltip="Show locations"
+        color="accent"
+        (click)="showPlace()">Lugares</button>
+
+        <button mat-raised-button
+        matTooltipPosition="above"
+        matTooltip="Show Episodes"
+        color="warn"
+        (click)="showEpisode()">Episodios</button>
+    </div>
+  </mat-card-actions>
+</mat-card>
+</div>

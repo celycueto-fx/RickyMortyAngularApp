@@ -1,0 +1,28 @@
+<div fxLayoutAlign="center center" >
+  <h1>Detalle de personaje</h1>
+</div>
+
+<div class="marginContent" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="40">
+  <div>
+    <img class="img-circle" [src]="this.urlImage" />
+  </div>
+
+  <div>
+    <mat-card>
+      <mat-card-content>
+        <div *ngFor="let item of dataCharacter">
+          <mat-card-title>{{ item.name }}</mat-card-title>
+          <ul>
+            <li>Id: {{ item.id }}</li>
+            <li>Name: {{ item.name }}</li>
+            <li>Gender: {{ item.gender }}</li>
+            <li>Location: {{ item.location.name }}</li>
+            <li>Origin: {{ item.origin.name }}</li>
+            <li>Specie: {{ item.species }}</li>
+            <li>Type: {{ item.type }}</li>
+          </ul>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

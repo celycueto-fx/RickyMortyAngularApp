@@ -1,0 +1,25 @@
+<div fxLayoutAlign="center center" >
+  <h1>Detalle del lugar</h1>
+</div>
+
+<div class="marginContent" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="40">
+
+  <div>
+    <mat-card>
+      <mat-card-content>
+        <div *ngFor="let item of dataLocation">
+          <mat-card-title>{{ item.name }}</mat-card-title>
+          <ul>
+            <li>Id: {{ item.id }}</li>
+            <li>Name: {{ item.name }}</li>
+            <li>Type: {{ item.type }}</li>
+            <li>dimension: {{ item.dimension }}</li>
+            <li>url: {{ item.url }}</li>
+            <li>Specie: {{ item.created}}</li>
+
+          </ul>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

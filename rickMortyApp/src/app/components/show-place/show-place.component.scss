@@ -1,0 +1,53 @@
+.img-circle{
+  width: 80PX;
+  border: 4px solid rgb(223 191 216);
+  border-radius: 2em;
+  height: 80Px;
+  margin: 5px;
+
+}
+.tablestyle{
+  padding: 20px;
+}
+.input{
+  width: max-content;
+}
+.table {
+  width: 80%;
+}
+
+.example-first-header-row th {
+  border-bottom: none;
+}
+
+.example-second-header-row {
+  font-style: italic;
+}
+
+.example-first-footer-row {
+  font-weight: bold;
+}
+
+.example-second-footer-row td {
+  font-style: italic;
+}
+.demo-table {
+  width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: #1976d280;
+  background: #1976d280;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}
+
+

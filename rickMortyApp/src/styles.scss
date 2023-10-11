@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 90%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  background-image: url('./assets/background.jpg');}
+.clss-cursor{
+  cursor: pointer;
+}
+.img-circle{
+  width: 40px;
+  border: 1px solid #349b65;
+  border-radius: 2em;
+  height: 10%;
+  margin: 5px;
+  cursor: pointer;
+
+}
+.mat-sort-header-content {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #0293a5;
+}
+.mat-mdc-row[_ngcontent-ng-c1524473983] .mat-mdc-cell[_ngcontent-ng-c1524473983] {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  color: black;
+}
+
+mat-form-field {
+  width: 78%!important
+}
+
+h1{
+  color: white;
+}
+
+.mdc-card__actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 52px;
+  padding: 27px !important;
+}
+
+.mat-elevation-z8 {
+  width: 80%;
+  background: white;
+  box-shadow: white;
+  border-radius: 1em;
+  padding: 20px;
+}

@@ -29,6 +29,8 @@ import { ShowEpisodeDetailComponent } from './show-espisode/show-episode-detail/
 import { MatTooltipModule } from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BackComponent } from './utils/back/back.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'personajes', component: ShowPersonComponent},
@@ -47,7 +49,8 @@ const routes: Routes = [
     ShowEspisodeComponent,
     ShowPersonDetailComponent,
     ShowPlaceDetailComponent,
-    ShowEpisodeDetailComponent],
+    ShowEpisodeDetailComponent,
+    BackComponent,],
     imports: [RouterModule.forChild(routes),CommonModule,
       MatButtonModule,
       MatIconModule,

@@ -118,6 +118,10 @@ export class ShowPersonComponent implements AfterViewInit,OnInit {
     this.searchForm.controls['gender'].setValue("")
     this.getCharacter();
   }
+
+  back(){
+    this.router.navigate(['']);
+  }
 }
 
 

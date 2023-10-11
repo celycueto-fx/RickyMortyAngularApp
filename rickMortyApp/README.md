@@ -1,3 +1,5 @@
+# RickMortyApp ur - Firebase: https://rickyandmorty-6b341.web.app/
+
 # RickMortyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.

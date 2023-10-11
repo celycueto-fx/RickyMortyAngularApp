@@ -26,7 +26,7 @@ export class ShowPlaceDetailComponent {
 
     this.serviceApi$.getLocationId(Number(this.id)).subscribe((res)=>{
       this.dataLocation=[res]
-      console.log(this.dataLocation)
+
     })
   }
 }

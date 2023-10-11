@@ -1,51 +1,13 @@
 import { ApiRickyMortyService } from './../../services/api-ricky-morty.service';
-
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
-import {MatSort, MatSortModule} from '@angular/material/sort';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { Info, RickyMorty } from 'src/app/models/ricky-morty';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatTableDataSource} from '@angular/material/table';
+import { RickyMorty } from 'src/app/models/ricky-morty';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-/** Constants used to fill up our data base. */
-const FRUITS: string[] = [
-  'blueberry',
-  'lychee',
-  'kiwi',
-  'mango',
-  'peach',
-  'lime',
-  'pomegranate',
-  'pineapple',
-];
-const NAMES: string[] = [
-  'Maia',
-  'Asher',
-  'Olivia',
-  'Atticus',
-  'Amelia',
-  'Jack',
-  'Charlotte',
-  'Theodore',
-  'Isla',
-  'Oliver',
-  'Isabella',
-  'Jasper',
-  'Cora',
-  'Levi',
-  'Violet',
-  'Arthur',
-  'Mia',
-  'Thomas',
-  'Elizabeth',
-];
 
-/**
- * @title Data table with sorting, pagination, and filtering.
- */
 @Component({
   selector: 'app-show-person',
   templateUrl: './show-person.component.html',
@@ -79,12 +41,15 @@ export class ShowPersonComponent implements AfterViewInit,OnInit {
 
   ngAfterViewInit() {
 
+  this.getCharacter();
+  }
+
+  getCharacter(){
     this.ApiRickyMortyService$.getCaracter().subscribe((res)=>{
       this.dataSource = new MatTableDataSource(res.results);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     })
-
   }
   searchFormInit() {
     this.searchForm = new FormGroup({
@@ -141,13 +106,17 @@ export class ShowPersonComponent implements AfterViewInit,OnInit {
         }
       })
 
-
-
-
     }
 
+  }
 
+  clearInput(){
 
+    this.searchForm.controls['status'].setValue("");;
+    this.searchForm.controls['species'].setValue("")
+    this.searchForm.controls['type'].setValue("")
+    this.searchForm.controls['gender'].setValue("")
+    this.getCharacter();
   }
 }
 

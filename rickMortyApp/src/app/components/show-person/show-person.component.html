@@ -11,7 +11,7 @@
         fxFlex="100"
       />
     </mat-form-field>
-<span>Filter by</span>
+    <span>Filter by</span>
     <form
       fxLayout="row"
       fxLayoutGap="10"
@@ -21,13 +21,11 @@
     >
       <mat-form-field class="search__form_field" appearance="outline">
         <mat-label>Status</mat-label>
-        <mat-select formControlName="status" matNativeControl  fxflex="80">
-
+        <mat-select formControlName="status" matNativeControl fxflex="20">
           <mat-option value="alive">Alive</mat-option>
           <mat-option value="dead">Dead</mat-option>
           <mat-option value="unknown">Unknowm</mat-option>
-
-      </mat-select>
+        </mat-select>
       </mat-form-field>
 
       <mat-form-field class="search__form_field" appearance="outline">
@@ -37,7 +35,6 @@
           aria-label="Arrival station"
           matInput
           formControlName="species"
-
         />
       </mat-form-field>
 
@@ -48,24 +45,26 @@
           aria-label="Arrival station"
           matInput
           formControlName="type"
-
         />
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="selecthab">
         <mat-label>Gender</mat-label>
-      <mat-select formControlName="gender" matNativeControl  fxflex="80">
+        <mat-select formControlName="gender" matNativeControl fxflex="80">
           <mat-option value="Female">Female</mat-option>
           <mat-option value="Male">Male</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20">
+        <button mat-raised-button  color="primary" (click)="applyFilter2()">filter</button>
 
-      </mat-select>
-    </mat-form-field>
-    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20">
-      <button   (click)="applyFilter2()">filtrar</button>
-      <button   (click)="applyFilter2()">limpiar</button>
-    </div>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20">
 
+        <button mat-raised-button color="warning" (click)="clearInput()">clear</button>
+      </div>
     </form>
+
   </div>
 </div>
 
@@ -90,7 +89,7 @@
         </td>
       </ng-container>
 
-      <!-- Progress Column -->
+      <!-- status Column -->
       <ng-container matColumnDef="status">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
         <td mat-cell *matCellDef="let row" (click)="showCharacter(row.id)">

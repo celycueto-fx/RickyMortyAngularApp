@@ -19,6 +19,10 @@ export class ShowEspisodeComponent {
   paginator!: MatPaginator;
   @ViewChild(MatSort)
   sort: MatSort = new MatSort;
+
+
+
+
   constructor(private ApiRickyMortyService$: ApiRickyMortyService,private router: Router){
 
   }
@@ -43,9 +47,7 @@ export class ShowEspisodeComponent {
       this.dataSource.paginator.firstPage();
     }
   }
-  showEpisode(id:number){
 
-  }
 
 
 }

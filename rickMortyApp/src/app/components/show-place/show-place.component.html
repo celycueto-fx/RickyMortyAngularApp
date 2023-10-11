@@ -1,21 +1,31 @@
 
-<div fxLayout="column" fxLayoutAlign="space-around center" >
-  <h1>Locations Ricky and Morty</h1>
-<mat-form-field class="mat-elevation-z8"  appearance="outline">
-  <mat-label>Filter</mat-label>
-  <input matInput   clasa="style-input" (keyup)="applyFilter($event)" placeholder="Name character" #input  fxFlex>
-</mat-form-field>
+<div fxLayout="column" fxLayoutAlign="space-around center">
+  <h1>Episodes Ricky and Morty</h1>
+  <div class="mat-elevation-z8">
+    <mat-form-field appearance="outline">
+      <mat-label>Filter</mat-label>
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="Name location or type"
+        #input
+        fxFlex="100"
+      />
+    </mat-form-field>
+
+
+  </div>
 </div>
 
 <div fxLayoutAlign="center center" class="tablestyle">
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
-
+<!--name colunm-->
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Name</th>
     <td mat-cell *matCellDef="let row" class="clss-cursor"(click)="showLocation(row.id)"> {{row.name}} </td>
   </ng-container>
-
+<!--TYpe colunm-->
     <ng-container matColumnDef="type">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Type</th>
       <td mat-cell *matCellDef="let row"> {{row.type}}</td>

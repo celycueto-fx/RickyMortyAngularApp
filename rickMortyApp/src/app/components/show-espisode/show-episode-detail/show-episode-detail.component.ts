@@ -24,9 +24,8 @@ export class ShowEpisodeDetailComponent {
 
   async getEpisodesById():Promise<void>{
 
-    this.serviceApi$.geEpisodesId(Number(this.id)).subscribe((res)=>{
+    this.serviceApi$.getEpisodesId(this.id).subscribe((res)=>{
       this.dataLocation=[res]
-      console.log(this.dataLocation)
     })
   }
 }

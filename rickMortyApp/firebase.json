@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "rickMortyApp",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

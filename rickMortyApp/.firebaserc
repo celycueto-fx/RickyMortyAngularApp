@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "rickyandmorty-6b341": {
+      "hosting": {
+        "rickMortyApp": [
+          "rickyandmorty-6b341"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "rickyandmorty-6b341"
+  }
+}

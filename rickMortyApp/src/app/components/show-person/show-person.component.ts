@@ -119,9 +119,7 @@ export class ShowPersonComponent implements AfterViewInit,OnInit {
     this.getCharacter();
   }
 
-  back(){
-    this.router.navigate(['']);
-  }
+
 }
 
 

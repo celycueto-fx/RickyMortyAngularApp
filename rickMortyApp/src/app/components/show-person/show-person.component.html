@@ -33,12 +33,11 @@
 
       <mat-form-field class="search__form_field" appearance="outline">
         <mat-label>Specie</mat-label>
-        <input
-          type="text"
-          aria-label="Arrival station"
-          matInput
-          formControlName="species"
-        />
+        <mat-select formControlName="species" matNativeControl fxflex="20">
+          <mat-option value="Human">Human</mat-option>
+          <mat-option value="Alien">Alien</mat-option>
+          <mat-option value="unknown">Unknowm</mat-option>
+        </mat-select>
       </mat-form-field>
 
       <mat-form-field class="search__form_field" appearance="outline">

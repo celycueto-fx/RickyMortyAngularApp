@@ -42,12 +42,19 @@
 
       <mat-form-field class="search__form_field" appearance="outline">
         <mat-label>type</mat-label>
-        <input
-          type="text"
-          aria-label="Arrival station"
-          matInput
-          formControlName="type"
-        />
+        <mat-select formControlName="type" matNativeControl fxflex="20">
+          <mat-option value="Gromflomite">Gromflomite</mat-option>
+          <mat-option value="Elephant-Person">Elephant-Person</mat-option>
+          <mat-option value="Boobloosian">Boobloosian</mat-option>
+          <mat-option value="Korblock">Korblock</mat-option>
+          <mat-option value="Bird-Person">Bird-Person</mat-option>
+          <mat-option value="Hivemind">Hivemind</mat-option>
+          <mat-option value="Bepisian">Bepisian</mat-option>
+          <mat-option value="Parasite">Parasite</mat-option>
+          <mat-option value="Cat-Person">Cat-Person</mat-option>
+          <mat-option value="Cromulon">Cromulon</mat-option>
+          <mat-option value=" ">Unknown</mat-option>
+        </mat-select>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="selecthab">

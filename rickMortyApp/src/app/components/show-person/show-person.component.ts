@@ -54,10 +54,10 @@ export class ShowPersonComponent implements AfterViewInit,OnInit {
   searchFormInit() {
     this.searchForm = new FormGroup({
 
-      status: new FormControl('', Validators.pattern('^[a-zA-Z ]+$')),
-      species: new FormControl('', Validators.pattern('^[a-zA-Z ]+$')),
-      type: new FormControl('', Validators.pattern('^[a-zA-Z ]+$')),
-      gender: new FormControl('', Validators.pattern('^[a-zA-Z ]+$')),
+      status: new FormControl(''),
+      species: new FormControl(''),
+      type: new FormControl(''),
+      gender: new FormControl(''),
 
 
     });
@@ -104,6 +104,9 @@ export class ShowPersonComponent implements AfterViewInit,OnInit {
         if (this.dataSource.paginator) {
           this.dataSource.paginator.firstPage();
         }
+      },
+      error=>{
+        this.dataSource.filter=error.toString()
       })
 
     }

@@ -13,4 +13,11 @@
 <body>
   <app-root></app-root>
 </body>
+  <script>
+    if(window === window.parent){
+      console.log('se esta desde un iframe',window,window.parent);
+    }else{
+    console.log('no esta')
+    }
+  </script>
 </html>
